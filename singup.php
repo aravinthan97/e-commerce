@@ -11,26 +11,26 @@
 
 <div class="container">
   <h2>Register</h2>
-  <form action="singup.php">
+  <form action="singup.php" method="post">
     <div class="form-group">
-      <label for="email">User Name :</label>
+      <label>UserName:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="username">
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label>Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <label>Retype-Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="re_password">
     </div>
     <div class="form-group">
-      <label for="pwd">Retype-Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-    </div>
-    <div class="form-group">
-      <label for="email">Date of Birth:</label>
-      <input type="date" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label>Date of Birth:</label>
+      <input type="date" class="form-control" id="email" placeholder="Enter email" name="date_of_birth">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
