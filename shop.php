@@ -1,41 +1,47 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <?php include 'includes/apiLink.php'; ?>
-    <?php include 'includes/top_nav.php'; ?>
-    <title></title>
-    <style>
-img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-}
-
-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-</style>
+    <title>shop</title>
+      <?php include 'includes/apiLink.php'; ?>
+      <link rel="stylesheet" href="styles/cart.css">
   </head>
   <body>
-<div class="imageHolder">
-<div class="holder">
-  <a target="_blank" href="">
-  <img src="images\download.jpg" alt="Paris" style="width:150px">
-  </a>
-<div>
-  <div class="holder">
-    <a target="_blank" href="">
-    <img src="images\download.jpg" alt="Paris" style="width:150px">
-    </a>
-  <div>
-    <div class="holder">
-      <a target="_blank" href="">
-      <img src="images\download.jpg" alt="Paris" style="width:150px">
-      </a>
-    <div>
+
+          <div class="container">
+       v
+          <?php
+          function iteam() {
+            $connect = mysqli_connect('localhost', 'root', '', 'zedtext');
+            $query = 'SELECT * FROM company ORDER by Company_ID ASC';
+            $result = mysqli_query($connect, $query);
+
+            if ($result):
+            if(mysqli_num_rows($result)>0):
+                while($product = mysqli_fetch_assoc($result)):
+
+          }
+          ?>
+
+               <div class="col-sm-4 col-md-3" >
+                   <form method="post" action="cart.php?action=add&id=<?php echo $product['Company_ID']; ?>">
+                       <div class="products">
+                           <img src="<?php echo $product['Logo']; ?>" class="img-responsive" width="150px"/>
+                           <h4 class="text-info"><?php echo $product['Company_Name']; ?></h4>
+                           <input type="submit" name="compony_info" style="margin-top:5px;" class="btn btn-info" value="Find iteam" />
+                       </div>
+                   </form>
+               </div>
+               <?php
+               endwhile;
+           endif;
+       endif;
+
+          ?>
+
+
 </div>
 
-  </body>
+</body>
 </html>

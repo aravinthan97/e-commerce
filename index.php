@@ -1,3 +1,6 @@
+<?php
+ session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,50 +59,16 @@
   </div>
 
 </div>
-<div class="holder">
-<figure class="snip1171">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample71.jpg" alt="sample71"/>
-  <figcaption>
-    <h3>Good SHOP</h3>
-    <a href="company_index.php" class="btn btn-default">Find item in this shop</a>
-    <p>
-    KM:10
-  </p>
-  </figcaption>
-</figure>
 
-<figure class="snip1171">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample71.jpg" alt="sample71"/>
-  <figcaption>
-    <h3>Good SHOP</h3>
-    <a href="company_index.php" class="btn btn-default">Find item in this shop</a>
-    <p>
-    KM:10
-  </p>
-  </figcaption>
-</figure>
-
-<figure class="snip1171">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample71.jpg" alt="sample71"/>
-  <figcaption>
-    <h3>Good SHOP</h3>
-    <a href="company_index.php" class="btn btn-default">Find item in this shop</a>
-    <p>
-    KM:10
-  </p>
-  </figcaption>
-</figure>
-
-<figure class="snip1171">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample71.jpg" alt="sample71"/>
-  <figcaption>
-    <h3>Good SHOP</h3>
-    <a href="company_index.php" class="btn btn-default">Find item in this shop</a>
-    <p>
-    KM:10
-  </p>
-  </figcaption>
-</figure>
+<div class="col-sm-4 col-md-3" >
+    <form method="post" action="cart.php?action=add&id=<?php echo $product['Company_ID']; ?>">
+        <div class="products">
+            <img src="<?php echo $product['Logo']; ?>" class="img-responsive" width="150px"/>
+            <h4 class="text-info"><?php echo $product['Company_Name']; ?></h4>
+            <input type="submit" name="compony_info" style="margin-top:5px;" class="btn btn-info" value="Find iteam" />
+        </div>
+    </form>
+</div>
 <br />
 <br />
 <br />
