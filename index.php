@@ -1,6 +1,3 @@
-<?php
- session_start();
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,15 +57,7 @@
 
 </div>
 
-<div class="col-sm-4 col-md-3" >
-    <form method="post" action="cart.php?action=add&id=<?php echo $product['Company_ID']; ?>">
-        <div class="products">
-            <img src="<?php echo $product['image']; ?>" class="img-responsive" width="150px"/>
-            <h4 class="text-info"><?php echo $product['name']; ?></h4>
-            <input type="submit" name="compony_info" style="margin-top:5px;" class="btn btn-info" value="Find iteam" />
-        </div>
-    </form>
-</div>
+<?php include_once "shop.php"; ?>
 <br />
 <br />
 <br />

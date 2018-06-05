@@ -2,7 +2,7 @@
      $serverName = "localhost";
      $dbUserName= "root";
      $dbPassword = "";
-     $dbName = "zedtext";
+     $dbName = "ecom";
 
      $conn = mysqli_connect($serverName,$dbUserName,$dbPassword,$dbName);
 
