@@ -5,7 +5,7 @@ session_start();
 <html>
   <body>
     <?php
-    if (isset($_SESSION['UID'])) {
+    if (isset($_SESSION['AdminID'])) {
       echo '  <div class="topnav">
         <a class="active1" href="adminindex.php">Zedtext</a>
         <a href="create_shop.php">create shop</a>
@@ -14,7 +14,7 @@ session_start();
         </form>
         </div>
       </div>';
-      echo $_SESSION['uName'];
+      echo $_SESSION['AdminName'];
     }
 
     ?>

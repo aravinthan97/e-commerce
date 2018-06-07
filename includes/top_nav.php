@@ -10,7 +10,7 @@
   //    echo $_SESSION['UID'];
 //      echo $_SESSION['uName'];
   //    echo $_SESSION['uEmail'];
-     echo $_SESSION['uBirth'];
+  //   echo $_SESSION['uBirth'];
     }else {
       echo '  <div class="topnav">
         <a class="active1" href="#home">Zedtext</a>

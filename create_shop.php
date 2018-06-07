@@ -8,7 +8,7 @@
   </head>
   <body>
      <div class="container" >
-       <form action="includes/cerate_shop_int.php" method="post">
+       <form action="includes/createshop_int.php" method="post">
          <div class="form-group">
            <label for="username">CompanyName</label>
            <input type="text" class="form-control" placeholder="Enter CompanyName" name="CompanyName">
@@ -37,10 +37,10 @@
            <label for="address">number:</label>
            <input type="text" class="form-control" placeholder="Enter phone number" name="number">
          </div>
-         <div class="form-group">
+      <!--   <div class="form-group">
            <label for="address">Logo</label>
            <input type="file" class="form-control" name="logo">
-         </div>
+         </div> -->
          <button type="submit" class="btn btn-primary" name="createShop">Submit</button>
        </form>
 

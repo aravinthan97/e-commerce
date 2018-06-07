@@ -75,9 +75,9 @@ if(isset($_POST['login'])) {
              exit();
            }elseif ($hashedpasswordChecker == true) {
              /// log in the the user
-             $_SESSION['UID'] = $row['Admin-ID'];
-             $_SESSION['uName'] = $row['UserName'];
-              $_SESSION['uEmail'] = $row['Email'];
+             $_SESSION['AdminID'] = $row['ID'];
+             $_SESSION['AdminName'] = $row['UserName'];
+              $_SESSION['AdminEmail'] = $row['Email'];
                header("Location:../adminindex.php");
                exit();
            }
