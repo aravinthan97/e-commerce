@@ -11,7 +11,9 @@ if (isset($_POST['createShop'])) {
   $zipcode = mysqli_real_escape_string($conn,$_POST['address-zipcode']);
   $contry_code = mysqli_real_escape_string($conn,$_POST['contry-code']);
   $number = mysqli_real_escape_string($conn,$_POST['number']);
-//   $upload =file_put_contents($new, $data);
+  move_uploaded_file($_FILES["image"]["tmp_name"],"../images/" . $_FILES["image"]["name"]);
+  $location=$_FILES["image"]["name"];
+
 
   // Error handlers
   //chcek for emty field
@@ -34,7 +36,7 @@ if (isset($_POST['createShop'])) {
            $result = mysqli_query($conn,$id);
            $row = mysqli_fetch_row($result);
            $row[0]+=1;
-          $sql = "INSERT INTO company (ID,Admin_ID ,CompanyName) VALUES('$row[0]','{$_SESSION['AdminID']}','$companyName')";
+          $sql = "INSERT INTO company (ID,Admin_ID ,CompanyName,Logo) VALUES('$row[0]','{$_SESSION['AdminID']}','$companyName','$location')";
           $result = mysqli_query($conn,$sql);
 
 
@@ -45,6 +47,7 @@ if (isset($_POST['createShop'])) {
       $sql = "INSERT INTO company_contact (Company_ID, country_code, contact_number)
       VALUES('$row[0]','$contry_code', '$number')";
         $result = mysqli_query($conn,$sql);
+
 
           if ($result) {
               // output data of each row

@@ -14,7 +14,7 @@
 
       /* check if server is alive */
       if ($conn->ping()) {
-          echo "Our connection is ok!";
+        
       } else {
           echo "Error: ".$mysqli->error;
       }
