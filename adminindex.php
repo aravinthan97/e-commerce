@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,34 +10,50 @@
     <?php
       include_once "includes/DB.php";
 
-       $sqlFind="SELECT * FROM company where Admin_ID= '{$_SESSION['AdminID']}'";
-    // $sqlFind = "SELECT * FROM admin INNER JOIN company ON admin.ID = company.Admin_ID";
-      $run = mysqli_query($conn,$sqlFind);
+       $query="SELECT * FROM company where Admin_ID= '{$_SESSION['AdminID']}'";
 
-       $sql="SELECT * FROM company";
-       $run1 = mysqli_query($conn,$sql);
-      if ($run1):
-          if(mysqli_num_rows($run1)>0):
-              while($rows = mysqli_fetch_assoc($run1)):
-              //print_r($product);
-    //  if(mysqli_num_rows($run) > 0){
-    //    while ($rows = mysqli_fetch_array($run)) {
-          // code...
-    //      echo $rows["CompanyName"]."<br>";
-    echo $rows['Logo'];
+    //   $query = "SELECT * FROM company ORDER BY ID DESC";
+       $result = mysqli_query($conn, $query);
+       while($row = mysqli_fetch_array($result))
+       {
+            echo '
+                 <tr>
+                      <td>
+                           <h2>'.($row['CompanyName']).'</h2>
+                           <img src="data:image/jpeg;base64,'.base64_encode($row['Logo'] ).'" height="200" width="200" class="img-thumnail" />
+                           <input type="button" name="SELECT" style="margin-top:5px;" class="btn btn-info"
+                                  value="SELECT" />
+                      </td>
+                 </tr>
+            ';
+       }
+
           ?>
-          <div class="col-sm-4 col-md-3" >
-                  <div class="products">
-                      <img src="images/<?php echo $rows['Logo']; ?>" class="img-responsive"/>
-                      <h4 class="text-info"><?php echo $rows['CompanyName']; ?></h4>
-                      <input type="button" name="SELECT" style="margin-top:5px;" class="btn btn-info" value="SELECT" />
-          </div>
-          <?php
-        endwhile;
-    endif;
-endif;
-    ?>
+
+
 
 
   </body>
 </html>
+<script>
+$(document).ready(function(){
+     $('#insert').click(function(){
+          var image_name = $('#image').val();
+          if(image_name == '')
+          {
+               alert("Please Select Image");
+               return false;
+          }
+          else
+          {
+               var extension = $('#image').val().split('.').pop().toLowerCase();
+               if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+               {
+                    alert('Invalid Image File');
+                    $('#image').val('');
+                    return false;
+               }
+          }
+     });
+});
+</script>
