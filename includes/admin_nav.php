@@ -9,6 +9,7 @@ session_start();
       echo '  <div class="topnav">
         <a class="active1" href="adminindex.php">Zedtext</a>
         <a href="create_shop.php">create shop</a>
+        <a href="additeam.php">add iteam</a>
         <form action="includes\logout_int.php" method="post">
           <button type="submit" name="logout">logout</button>
         </form>

@@ -27,7 +27,7 @@ elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       exit();
     }
 else {
-      $sql = "SELECT * FROM user WHERE email = '$email'";
+      $sql = "SELECT * FROM user WHERE Email = '$email'";
       $result = mysqli_query($conn,$sql);
       $resultChecker = mysqli_num_rows($result);
 
@@ -40,7 +40,7 @@ else {
           //hashing the password
           $hashed = password_hash($password ,PASSWORD_DEFAULT);
           //INSERT THE USER INTO THE DATABASE
-          $sql = "INSERT INTO user(UserName , Email , Password , Date_of_Birth) VALUES('$username','$email','$hashed','$date')";
+          $sql = "INSERT INTO user(UserName , Email , Password , Date_Of_Birth) VALUES('$username','$email','$hashed','$date')";
           $result = mysqli_query($conn,$sql);
           header("Location: ../singup.php?singup=successfully");
           exit();
