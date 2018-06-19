@@ -25,7 +25,7 @@
 
                {
 
-                    echo "<option value='" . $row['ID'] . "'>'" . $row['CompanyName'] . "'</option>";
+                    echo "<option value='" . $_SESSION['COMPANYID']=$row['ID'] . "'>'" . $row['CompanyName'] . "'</option>";
 
                }
 
