@@ -44,7 +44,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
             'quantity' => filter_input(INPUT_POST, 'quantity')
         );
     }
-    header('Location:text.php?id='.$myid);
+    header('Location:iteam.php?id='.$myid);
 }
 
 if(filter_input(INPUT_GET, 'action') == 'delete'){
@@ -58,7 +58,7 @@ if(filter_input(INPUT_GET, 'action') == 'delete'){
     //reset session array keys so they match with $product_ids numeric array
     $_SESSION['shopping_cart'] = array_values($_SESSION['shopping_cart']);
 
-      header('Location:text.php?id='.$myid);
+      header('Location:iteam.php?id='.$myid);
 }
 
 //pre_r($_SESSION);

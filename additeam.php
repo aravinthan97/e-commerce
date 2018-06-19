@@ -40,10 +40,11 @@
         <div class="form-group">
           <label>iteam type:</label>
         <select name="myselectbox">
-         <option name="myoption1" value="myoption1">myoption1</option>
-         <option name="myoption2" value="myoption2">myoption2</option>
-         <option name="myoption3" value="myoption3">myoption3</option>
-         <option name="myoption4" value="myoption4">myoption4</option>
+         <option name="FrozenFood" value="FrozenFood">FrozenFood</option>
+         <option name="Meat" value="Meat">Meat</option>
+         <option name="water" value="water">water</option>
+         <option name="cleaners" value="cleaners">cleaners</option>
+         <option name="rawfood" value="rawfood">rawfood</option>
         </select>
         <div class="form-group">
           <label>iteam price</label>

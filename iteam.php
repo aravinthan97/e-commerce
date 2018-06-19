@@ -8,10 +8,9 @@
         <link rel="stylesheet" type="text/css" href="styles/cart.css">
     </head>
     <body>
-      <h2>Modal Example</h2>
-
+    
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<button id="myBtn">stor</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -44,7 +43,7 @@
        <td>$ <?php echo $product['price']; ?></td>
        <td>$ <?php echo number_format($product['quantity'] * $product['price'], 2); ?></td>
        <td>
-           <a href="text1.php?myid=<?php echo $myid?>&action=delete&id=<?php echo $product['id']; ?>">
+           <a href="iteam_int.php?myid=<?php echo $myid?>&action=delete&id=<?php echo $product['id']; ?>">
                 <div class="btn-danger">Remove</div>
            </a>
        </td>
@@ -90,7 +89,7 @@
                 //print_r($product);
                 ?>
                 <div class="col-sm-4 col-md-3" >
-                    <form method="post" action="text1.php?myid=<?php echo $myid?>&action=add&id=<?php echo $product['id']; ?>">
+                    <form method="post" action="iteam_int.php?myid=<?php echo $myid?>&action=add&id=<?php echo $product['id']; ?>">
                         <div class="products">
                           <?php
                                 echo ' <img src="data:image/jpeg;base64,'.base64_encode($product['image'] ).'" class="img-responsive" alt="a"/>';
@@ -102,6 +101,8 @@
                             <input type="hidden" name="price" value="<?php echo $product['price']; ?>" />
                             <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-info"
                                    value="Add to Cart" />
+                                     <li><a href="aboutIteam.php?id=<?php echo $product['id']; ?>">about</a></li>
+
                         </div>
                     </form>
                 </div>
