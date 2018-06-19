@@ -22,6 +22,28 @@ else {
 mysqli_close($conn);
 exit();
 }
+
+ elseif (isset($_POST['Adminupdate'])){
+include_once "DB.php";
+
+echo "all good ";
+// check all the name in form
+$username = mysqli_real_escape_string($conn,$_POST['username']);
+$email = mysqli_real_escape_string($conn,$_POST['email']);
+$id = $_SESSION['AdminID'];
+
+$sql = "UPDATE `admin` SET `UserName`='".$username."',`Email`='".$email."' WHERE `User_ID`= $id";
+$result = mysqli_query($conn,$sql);
+
+if($result){
+  echo "data update";
+}
+else {
+    echo "not update ";
+}
+mysqli_close($conn);
+exit();
+}
 else {
   echo "all not good";
 }

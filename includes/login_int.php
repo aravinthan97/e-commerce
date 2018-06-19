@@ -33,11 +33,11 @@ if(isset($_POST['login'])) {
            exit();
          }elseif ($hashedpasswordChecker == true) {
            /// log in the the user
-           $_SESSION['UID'] = $row['User_ID'];
+           $_SESSION['UID'] = $row['ID'];
            $_SESSION['uName'] = $row['UserName'];
             $_SESSION['uEmail'] = $row['Email'];
              $_SESSION['uBirth'] = $row['Date_Of_Birth'];
-             header("Location:../index.php?login=succes");
+             header("Location:../index.php?login='{$_SESSION['uName']}'");
              exit();
          }
        }

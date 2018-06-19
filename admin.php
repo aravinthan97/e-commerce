@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +7,7 @@ session_start();
 </head>
 <body>
 
-  <?php include 'includes/top_nav.php'; ?>
+  <?php include 'includes/admin_nav.php'; ?>
 
 <div class="container">
   <h2>Sign in</h2>
