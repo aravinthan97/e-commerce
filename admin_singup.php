@@ -4,11 +4,9 @@
   <title>Register</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php include 'includes/apiLink.php'; ?>
+  <?php include 'includes/admin_nav.php'; ?>
 </head>
 <body>
-
-  <?php include 'includes/top_nav.php'; ?>
-
 <div class="container">
   <h2>Register</h2>
   <form action="includes/singup_int.php" method="post">

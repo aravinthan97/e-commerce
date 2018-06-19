@@ -32,6 +32,8 @@ session_start();
       <a class="navbar-brand" href="adminindex.php">Admin</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
+    <li><a href="admin.php">Login</a></li>
+      <li><a href="admin_singup.php">singup</a></li>
     </ul>
   </div>
 </nav>';

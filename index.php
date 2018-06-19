@@ -52,12 +52,12 @@
     <div id="ck">
          <a href="itemFilter.php">Find with Cracker</a>
     </div>
-     <h2>Shop Near you</h2>
+     <h2>sale iteam </h2>
   </div>
 
 </div>
 
-<?php include_once "shop.php"; ?>
+
 <br />
 <br />
 <br />
