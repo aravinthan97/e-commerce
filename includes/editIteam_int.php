@@ -10,6 +10,7 @@
        $about_product = mysqli_real_escape_string($conn,$_POST['about_product']);
        $product_quantity = mysqli_real_escape_string($conn,$_POST['product_quantity']);
 
+
        $sql = "UPDATE `products` SET `name`='".$name."',`price`='".$price."',`about_product`='".$about_product."',`product_quantity`='".$product_quantity."' WHERE `id`=$product";
        $result = mysqli_query($conn,$sql);
 
@@ -26,6 +27,6 @@
        exit();
        }  else {
 
-             header("Location:../adminindex.php");
+             header("Location:../admin.php");
          }
 ?>
