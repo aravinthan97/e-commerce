@@ -8,9 +8,12 @@
         <link rel="stylesheet" type="text/css" href="styles/cart.css">
     </head>
     <body>
-
+<div class="container">
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">stor</button>
+
+<button id="myBtn" class="btn btn-default btn-sm">
+<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -76,6 +79,7 @@
   </div>
 
 </div>
+</div>
         <div class="container">
         <?php
 
@@ -99,9 +103,8 @@
                             <input type="text" name="quantity" class="form-control" value="1" />
                             <input type="hidden" name="name" value="<?php echo $product['name']; ?>" />
                             <input type="hidden" name="price" value="<?php echo $product['price']; ?>" />
-                            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-info"
-                                   value="Add to Cart" />
-                                     <li><a href="aboutIteam.php?id=<?php echo $product['id']; ?>">about</a></li>
+                            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-info" value="Add to Cart" />
+                            <a href="aboutIteam.php?id=<?php echo $product['id']; ?>" class="btn btn-info" role="button">about</a>
 
                         </div>
                     </form>

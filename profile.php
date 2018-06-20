@@ -1,10 +1,15 @@
+<?php include 'includes/apiLink.php'; ?>
+<?php include 'includes/top_nav.php'; ?>
+<?php
+if (!isset($_SESSION['UID'])){
+header("Location:admin.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>profile</title>
-    <?php include 'includes/apiLink.php'; ?>
-    <?php include 'includes/top_nav.php'; ?>
   </head>
   <body>
     <div class="container">

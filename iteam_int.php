@@ -61,6 +61,7 @@ if(filter_input(INPUT_GET, 'action') == 'delete'){
       header('Location:iteam.php?id='.$myid);
 }
 
+
 //pre_r($_SESSION);
 
 function pre_r($array){
