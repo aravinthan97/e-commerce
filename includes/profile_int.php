@@ -3,7 +3,6 @@ session_start();
 if (isset($_POST['update'])){
 include_once "DB.php";
 
-echo "all good ";
 // check all the name in form
 $username = mysqli_real_escape_string($conn,$_POST['username']);
 $email = mysqli_real_escape_string($conn,$_POST['email']);
@@ -44,8 +43,7 @@ else {
 mysqli_close($conn);
 exit();
 }
-
 else {
-  echo "all not good";
+    header("Location:../index.php");
 }
 ?>

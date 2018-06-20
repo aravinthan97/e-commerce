@@ -21,11 +21,13 @@
             <div class="col-md-4">
                 <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
                 <img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" class="img-responsive"  height="200" width="200"/><br/>
-                <h4 class="text-info">'.($row['name']).'</h4>
+                <h4 class="text-info">Name:'.($row['name']).'</h4>
+                <h4 class="text-info">$'.($row['price']).'</h4>
+                <h4 class="text-info">quantity:'.($row['product_quantity']).'</h4>
                 <h2>Modal Example</h2>
 
                 <!-- Trigger/Open The Modal -->
-                <button id="myBtn">Open Modal</button>
+                <button id="myBtn">edit</button>
 
 
                 <!-- The Modal -->

@@ -14,10 +14,14 @@
 
       /* check if server is alive */
       if ($conn->ping()) {
-        
+
       } else {
           echo "Error: ".$mysqli->error;
+
       }
+
+
+      //    header("Location:../index.php");
 
 
 ?>

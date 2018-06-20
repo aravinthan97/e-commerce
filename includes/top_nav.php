@@ -1,13 +1,10 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
-<html>
-  <body>
-    <?php
-    if (isset($_SESSION['UID'])) {
-      echo '<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+<?php
+   if (isset($_SESSION['UID'])) {
+       echo '<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Ecom</a>
       <a class="navbar-brand" href="#">'.$_SESSION['uName'].'</a>
@@ -48,8 +45,4 @@ session_start();
   </div>
 </nav>';
     }
-
     ?>
-
-  </body>
-</html>

@@ -19,14 +19,13 @@
         exit();
        }
        else {
-    //       header('Location:adminindex.php');
           echo "not update ";
           exit();
        }
        mysqli_close($conn);
        exit();
-       }
+       }  else {
+
+             header("Location:../adminindex.php");
+         }
 ?>
-
-
-//action="adminshop.php?id='.($row['Company_ID']).'"

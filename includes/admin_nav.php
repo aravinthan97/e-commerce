@@ -1,9 +1,7 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
-<html>
-  <body>
+
     <?php
     if (isset($_SESSION['AdminID'])) {
       echo '<nav class="navbar navbar-inverse">
@@ -25,21 +23,20 @@ session_start();
   </div>
 </nav>';
     }
-    else {
+  else {
       echo '<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="adminindex.php">Admin</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-    <li><a href="admin.php">Login</a></li>
-      <li><a href="admin_singup.php">singup</a></li>
+    <li><a href="admin.php">Admin Login</a></li>
+    <li><a href="admin_singup.php">Admin singup</a></li>
+    <li><a href="login.php">Login</a></li>
+    <li><a href="Singup.php">singup</a></li>
+
     </ul>
   </div>
-</nav>';
-    }
+</nav>';}
 
     ?>
-
-  </body>
-</html>

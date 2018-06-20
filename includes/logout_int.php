@@ -7,4 +7,7 @@ if (isset($_POST['logout'])){
   header("Location: ../index.php");
   exit();
 }
+else {
+    header("Location:../index.php");
+}
  ?>

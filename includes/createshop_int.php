@@ -21,7 +21,7 @@ if (isset($_POST['createShop'])) {
   //  header("Location: ../singup.php?singup=empty");
     exit();
       }
-          else {
+  else {
           $sql = "SELECT * FROM company WHERE CompanyName = '$companyName'";
           $result = mysqli_query($conn,$sql);
           $resultChecker = mysqli_num_rows($result);
@@ -51,6 +51,7 @@ if (isset($_POST['createShop'])) {
           if ($result) {
               // output data of each row
               echo "New address added for company ID: " ;
+              header("Location: ../create_shop.php?singup=new company created successfully");
           } else {
                echo "Error while creating new company";
         }
@@ -58,6 +59,8 @@ if (isset($_POST['createShop'])) {
        exit();
     }
  }
+} else {
+      header("Location:../create_shop.php");
 }
 
 ?>
