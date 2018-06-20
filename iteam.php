@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="styles/cart.css">
     </head>
     <body>
-    
+
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">stor</button>
 
@@ -64,7 +64,7 @@
             if (isset($_SESSION['shopping_cart'])):
             if (count($_SESSION['shopping_cart']) > 0):
          ?>
-            <a href="#" class="button">Checkout</a>
+            <a href="checkout.php" class="button">Checkout</a>
          <?php endif; endif; ?>
         </td>
     </tr>

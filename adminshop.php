@@ -22,7 +22,7 @@
             <div class="col-md-4">
                 <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
                 <img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" class="img-responsive"  height="200" width="200"/><br/>
-                <h4 class="text-info">'.($row['Product_name']).'</h4>
+                <h4 class="text-info">'.($row['name']).'</h4>
 
               </div>
            </div>

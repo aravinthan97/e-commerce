@@ -20,15 +20,11 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="images\02.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="images/E-commerce-Flash-Sales.jpg" alt="Los Angeles" width="900" height="600">
       </div>
 
-      <div class="item">
-        <img src="images/mountains1.jpg" alt="Chicago" style="width:100%;">
-      </div>
-
-      <div class="item">
-        <img src="images\02.jpg" alt="New york" style="width:100%;">
+      <div class="item"  width="900" height="600">
+          <img src="images\6-Key-Call-Center-Metrics-for-E-commerce-Business.jpg" alt="Los Angeles" width="900" height="600">
       </div>
     </div>
 

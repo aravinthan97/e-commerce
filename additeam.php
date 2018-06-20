@@ -62,6 +62,10 @@
           <label>image iteam :</label>
           <input type="file" class="form-control"  placeholder="Enter image" name="imageIcon">
         </div>
+        <div class="form-group">
+          <label>video URL</label>
+          <input type="text" class="form-control" placeholder="Enter video url" name="video">
+        </div>
 
         <button type="submit" class="btn btn-primary"name="itemsubmit">Submit</button>
       </form>

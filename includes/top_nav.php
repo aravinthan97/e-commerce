@@ -40,7 +40,9 @@ session_start();
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <li><a href="login.php">Login</a></li>
+      <li><a href="admin.php">Admin Login</a></li>
+      <li><a href="admin_singup.php">Admin singup</a></li>
+      <li><a href="login.php">Login</a></li>
       <li><a href="Singup.php">singup</a></li>
     </ul>
   </div>

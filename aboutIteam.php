@@ -36,8 +36,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h3>video</h3>
-      <iframe width="1000" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-      </iframe>
+      <?php echo $row['video'];?>
     </div>
   </div>
 </div>
