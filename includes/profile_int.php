@@ -44,6 +44,7 @@ else {
 mysqli_close($conn);
 exit();
 }
+
 else {
   echo "all not good";
 }
