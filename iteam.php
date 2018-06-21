@@ -21,7 +21,6 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
     <div class="table-responsive">
     <table class="table">
         <tr><th colspan="5"><h3>Order Details</h3></th></tr>
@@ -79,6 +78,29 @@
   </div>
 
 </div>
+</div>
+<div class="container">
+  <?php
+  include_once "includes/DB.php";
+ $query="SELECT * FROM company where ID= '{$_GET['id']}'";
+  $result = mysqli_query($conn, $query);
+  if ($result):
+      if(mysqli_num_rows($result)>0):
+          while($company = mysqli_fetch_assoc($result)):
+          ?>
+
+            <div class="box" align="center" height="200">
+              <?php  echo ' <img src="data:image/jpeg;base64,'.base64_encode($company['Logo'] ).'" class="img-responsive" id="companylogo" alt="a"/>';?>
+                  <h2 class="text-info" align="center"><?php echo $company['CompanyName']; ?></h2>
+                </div>
+
+          <?php
+          endwhile;
+      endif;
+  endif;
+
+  ?>
+
 </div>
         <div class="container">
         <?php

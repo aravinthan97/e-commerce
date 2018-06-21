@@ -520,3 +520,6 @@ span.price {
     margin-bottom: 20px;
   }
 }
+#companylogo {
+  border-radius: 50%;
+}

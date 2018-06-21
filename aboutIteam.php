@@ -18,7 +18,7 @@
 
 <div class="container">
   <?php
-        echo ' <img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" class="img-responsive" alt="a" width="200" height="200"/> ';
+        echo ' <img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" class="img-responsive" alt="a" id="companylogo" width="400" height="400"/> ';
   ?>
   <h3>Name:<?php echo $row['name'];?></h3>
   <h4>Price:$<?php echo $row['price'];?></h4>
